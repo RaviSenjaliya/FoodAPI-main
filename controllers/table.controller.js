@@ -23,7 +23,7 @@ exports.create = (req, res) => {
 
 exports.findAll = (req, res) => {
     table
-        .find()
+        .find().sort({table:1})
         .then((data) => {
             res.send(data);
         })
